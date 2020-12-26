@@ -1,0 +1,40 @@
+@keyframes boxAnimation{
+    from { opacity: 1;}
+    to { opacity:0;}
+    100%{visibility:hidden;}
+}
+@keyframes hatAnimation{
+    from {opacity: 1;}
+    to { opacity:0;}
+    100%{visibility:hidden;}
+}
+@keyframes giftAnimation{
+    from {visibility: hidden; opacity: 0;}
+    1% {visibility: visible;}
+    to {visibility:visible; opacity:1;}
+}
+#hat,#box,#gift{
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+#hat{
+    animation-name:hatAnimation;
+    animation-delay: 0s;
+}
+#box {
+    animation-name:boxAnimation;
+    animation-delay: 0.8s;
+}
+#gift {
+    animation-name:giftAnimation;
+    animation-delay: 1.6s;
+}
+.open>#hat,.open>#box,.open>#gift{
+    animation-play-state: running;
+}
+#gift{
+    visibility: hidden;
+}
