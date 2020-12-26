@@ -14,11 +14,11 @@ body{
     height:var(--spotlight-size);
     padding:10vmin;
     background:radial-gradient(circle at center,white 0%, white 55%,#00000000 60%);
-    overflow: hidden;
 }
 .spotlight>*{
     position: absolute;
      min-width:var(--spotlight-size);
+     max-width:95%;
 }
 .flex{display: flex;}
 .flex.verticalFlex{flex-direction: column; align-items: center; justify-content: space-between;}
